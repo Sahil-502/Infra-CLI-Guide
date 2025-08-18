@@ -1,12 +1,3 @@
-## What is `tar`?
-
-Perfect choice Sahil 👍
-The **`tar` command** is one of the most widely used Linux/Unix commands for **archiving and compressing files**. It’s often used in **backup, packaging, and deployment workflows**. Let’s go for a **deep dive** 🚀
-
----
-
-# 🔹 **`tar` Command – Deep Dive**
-
 ## 1. **What is `tar`?**
 
 * `tar` stands for **tape archive**.
