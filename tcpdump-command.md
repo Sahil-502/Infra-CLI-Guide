@@ -51,7 +51,12 @@ sudo tcpdump udp
 #### Save captured packets to a file
 ```
 sudo tcpdump -w capture.pcap
+#If you want to capture only port 80 traffic (HTTP), use:
+sudo tcpdump -i any port 80 -w capture.pcap
 ```
+`-i any` → Capture on all interfaces (you can also specify one, like -i eth0).
+`port 80` → Only traffic to/from TCP/UDP port 80.
+`-w capture.pcap` → Write to file instead of printing on screen.
 `-w` = write to file.
 Later analyze with Wireshark.
 #### Read from a saved file
