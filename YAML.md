@@ -146,7 +146,7 @@ Both `pod1` and `pod2` reuse the same container config, only the `name` changes.
 
 In simple words:
 
-`&` = save something
+`&` = save something \n
 `*` = use it again anywhere
 
 
