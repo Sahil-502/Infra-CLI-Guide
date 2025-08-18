@@ -277,14 +277,11 @@ Here, YAML is acting like a mini-language for describing data.
 It’s basically a human-friendly alternative to JSON or XML.
 
 ### Key Difference
-
 - Programming Language (like Python, Java): executes logic, has loops, conditions, functions.
 - Serialization Language / Format (like YAML, JSON, XML): only represents and structures data, no logic execution.
-
 - So, YAML ≠ a programming language
 - YAML = data serialization language + configuration file format
 - YAML is like a recipe (ingredients + steps written clearly).
 - Programming language is like the chef who actually cooks using that recipe.
-
 - YAML is not a programming language.
 - YAML is a data serialization language (human-readable) and used as a format for configuration files.
