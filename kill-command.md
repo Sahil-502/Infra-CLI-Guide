@@ -103,24 +103,34 @@ ps -p PID
 ```
 
 
-🔹 Alternative to kill -9
-Instead of kill -9, try:
-    • Graceful stop with SIGTERM
+### 🔹 Alternative to kill -9
+#### Instead of kill -9, try:
+Graceful stop with SIGTERM
+```
 kill -15 PID
+```
 (default signal)
-    • Stop then continue (debugging)
+• Stop then continue (debugging)
+```
 kill -STOP PID
 kill -CONT PID
-    • Use pkill or killall (kill by process name instead of PID):
+```
+• Use pkill or killall (kill by process name instead of PID):
+```
 pkill -9 nginx
 killall -9 nginx
-🔹 Comparison: kill vs kill -9
-Command	Signal	Effect	When to Use
-kill PID	15 (SIGTERM)	Graceful shutdown	Default, preferred
-kill -9 PID	9 (SIGKILL)	Immediate force kill	Last resort
-kill -STOP PID	19 (SIGSTOP)	Pause process	Debugging
-kill -CONT PID	SIGCONT	Resume process	After STOP
+```
+### 🔹 Comparison: kill vs kill -9
+
+| Command          | Signal       | Effect               | When to Use        |
+| ---------------- | ------------ | -------------------- | ------------------ |
+| `kill PID`       | 15 (SIGTERM) | Graceful shutdown    | Default, preferred |
+| `kill -9 PID`    | 9 (SIGKILL)  | Immediate force kill | Last resort        |
+| `kill -STOP PID` | 19 (SIGSTOP) | Pause process        | Debugging          |
+| `kill -CONT PID` | SIGCONT      | Resume process       | After STOP         |
+
 ✅ Golden Rule: Always try kill PID (SIGTERM) first, use kill -9 PID only when absolutely necessary.
+
 ################################################################################################
 🔹 Most Common Signals Explained
 
