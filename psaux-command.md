@@ -57,7 +57,7 @@ ps aux | grep nginx
 ```
 
 
-## 🔹 WDevOps Use Cases
+## 🔹 DevOps Use Cases
 ### 🔹 Debugging high CPU/memory:
 🔹 If a container or app is consuming too much, check with:
 ```
