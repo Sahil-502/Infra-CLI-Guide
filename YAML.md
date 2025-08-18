@@ -197,8 +197,95 @@ spec:
 ```
 ### Practice Plan
 
-- 🔹 Step 1: Write simple key-value YAML
-- 🔹 Step 2: Create lists and dictionaries
-- 🔹 Step 3: Mix lists + dictionaries (nested)
-- 🔹 Step 4: Try Docker Compose & Kubernetes YAML
-- 🔹 Step 5: Validate YAML using an online linter (like yamllint.com)
+- Step 1: Write simple key-value YAML
+- Step 2: Create lists and dictionaries
+- Step 3: Mix lists + dictionaries (nested)
+- Step 4: Try Docker Compose & Kubernetes YAML
+- Step 5: Validate YAML using an online linter (like yamllint.com)
+
+## CamelCase Concept
+### What is CamelCase?
+CamelCase is a naming style where:
+- The first word starts lowercase
+- Every next word starts with an uppercase letter
+- No spaces or underscores between words
+
+👉 It looks like the “humps of a camel” 🐪 — that’s why it’s called CamelCase.
+
+### Examples
+- firstName ✅
+- lastName ✅
+- myPhoneNumber ✅
+#### ❌ Wrong ways:
+- firstname (hard to read)
+- FirstName (this is called PascalCase, not camelCase)
+- first_name (this is called snake_case)
+
+### Types of CamelCase
+#### lowerCamelCase → first letter is lowercase
+- Example: myVariableName
+- Used in: JavaScript variables, Java methods, JSON keys
+
+#### UpperCamelCase (PascalCase) → first letter is uppercase
+- Example: MyVariableName
+- Used in: Class names in Java, C#, Python
+
+### Comparison with Other Naming Styles
+| Style       | Example            | Used In                    |
+| ----------- | ------------------ | -------------------------- |
+| camelCase   | `myVariableName`   | JavaScript, Java methods   |
+| PascalCase  | `MyVariableName`   | Class names                |
+| snake\_case | `my_variable_name` | Python variables/functions |
+| kebab-case  | `my-variable-name` | URLs, CSS classes          |
+
+### Why use CamelCase?
+- Improves readability
+- Avoids spaces (not allowed in code identifiers)
+- Follows coding conventions of many languages
+
+Example in JavaScript:
+```javascript
+let firstName = "Sahil";   // camelCase
+class UserProfile { }      // PascalCase
+```
+
+## Is YAML a Language or a Format?
+### YAML is both a "data serialization language" and a "format".
+- Officially, YAML is a data serialization language → meaning it is a way to represent structured data in text form.
+- Practically, YAML acts as a format (like JSON, XML, CSV) used to store and exchange configuration data.
+
+### Language Aspect
+- YAML has syntax rules (indentation, key-value, lists, anchors, etc.).
+- It allows you to describe structured data (maps, lists, scalars).
+#### Example:
+```yaml
+person:
+  name: Sahil
+  age: 25
+  skills:
+    - Kubernetes
+    - GCP
+```
+Here, YAML is acting like a mini-language for describing data.
+
+### Format Aspect
+- YAML is used as a file format for configuration in tools like:
+  - Kubernetes (`deployment.yaml`)
+  - Docker Compose (`docker-compose.yaml`)
+  - Ansible Playbooks (`playbook.yaml`)
+  - GitHub Actions (`workflow.yaml`)
+
+It’s basically a human-friendly alternative to JSON or XML.
+
+### Key Difference
+
+- Programming Language (like Python, Java): executes logic, has loops, conditions, functions.
+- Serialization Language / Format (like YAML, JSON, XML): only represents and structures data, no logic execution.
+
+- So, YAML ≠ a programming language
+- YAML = data serialization language + configuration file format
+- YAML is like a recipe (ingredients + steps written clearly).
+- Programming language is like the chef who actually cooks using that recipe.
+
+- YAML is not a programming language.
+- YAML is a data serialization language (human-readable) and used as a format for configuration files.
