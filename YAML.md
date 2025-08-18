@@ -197,8 +197,8 @@ spec:
 ```
 ### Practice Plan
 
-🔹 Step 1: Write simple key-value YAML
-🔹 Step 2: Create lists and dictionaries
-🔹 Step 3: Mix lists + dictionaries (nested)
-🔹 Step 4: Try Docker Compose & Kubernetes YAML
-🔹 Step 5: Validate YAML using an online linter (like yamllint.com)
+- 🔹 Step 1: Write simple key-value YAML
+- 🔹 Step 2: Create lists and dictionaries
+- 🔹 Step 3: Mix lists + dictionaries (nested)
+- 🔹 Step 4: Try Docker Compose & Kubernetes YAML
+- 🔹 Step 5: Validate YAML using an online linter (like yamllint.com)
