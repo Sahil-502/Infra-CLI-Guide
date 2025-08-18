@@ -1,6 +1,6 @@
 # Deep Dive into `kill` Command
 
-## 📌 What is the `kill` Command?
+## 🔹 What is the `kill` Command?
 The `kill` command in Linux/Unix is used to send signals to processes.
 Despite its name, it doesn’t always mean "terminate" — it can send different types of signals to a process (stop, continue, reload, kill, etc.).
 
@@ -9,7 +9,7 @@ If the process ignores it, you can use SIGKILL (signal 9) to forcefully kill it.
 
 ---
 
-### ⚡ Basic Usage
+### 🔹 Basic Usage
 
 ```bash
 kill [options] <PID>
@@ -22,7 +22,7 @@ kill 1234
 ```
 This sends `SIGTERM` to process with PID `1234`.
 
-### ⚡ Commonly Used Signals
+### 🔹 Commonly Used Signals
 | Signal Name | Number | Meaning                               | Example           |
 | ----------- | ------ | ------------------------------------- | ----------------- |
 | SIGTERM     | 15     | Graceful termination (default)        | `kill 1234`       |
@@ -31,7 +31,7 @@ This sends `SIGTERM` to process with PID `1234`.
 | SIGCONT     | 18     | Resume a stopped process              | `kill -CONT 1234` |
 | SIGHUP      | 1      | Reload config / restart process       | `kill -HUP 1234`  |
 
-### 🎯 Why Use kill?
+### 🔹 Why Use kill?
 
 - Stop a program that’s misbehaving.
 - Restart daemons by sending SIGHUP.
@@ -51,41 +51,58 @@ This sends `SIGTERM` to process with PID `1234`.
 
 
 
+---
 ### 🔹 Use of `kill -9 PID`?
 - kill is a Linux command used to send signals to processes.
 - 9 means you’re sending the SIGKILL signal.
 - PID is the Process ID of the program you want to kill.
-
 So, kill -9 PID = “Forcefully terminate the process with this PID immediately, no cleanup allowed.”
 
-
-🔹 Signals in Linux (Background)
+### 🔹 Signals in Linux (Background)
 Every process in Linux can receive signals (messages from the kernel or user). Examples:
-    • SIGTERM (15) → default signal (kill PID) – asks the process to terminate gracefully (cleanup, save work, close files).
-    • SIGKILL (9) → cannot be ignored or handled, kills process instantly.
-    • SIGSTOP (19) → pause process (like Ctrl+Z).
-    • SIGCONT → continue a stopped process.
+- SIGTERM (15) → default signal (kill PID) – asks the process to terminate gracefully (cleanup, save work, close files).
+- SIGKILL (9) → cannot be ignored or handled, kills process instantly.
+- SIGSTOP (19) → pause process (like Ctrl+Z).
+- SIGCONT → continue a stopped process.
+
 👉 Check all signals:
+```
 kill -l
-🔹 Why use kill -9?
-    • When a process is hung/frozen and doesn’t respond to kill PID (SIGTERM).
-    • When a process ignores other signals.
-    • When you need to force-stop quickly (like zombie processes, stuck apps).
-🔹 Problems with kill -9
-    • Process does not clean up (temporary files, open sockets, locks remain).
-    • If it’s writing to a database/file → may cause corruption.
-    • Should be last resort.
-🔹 Step-by-Step Examples
+```
+---
+### 🔹 Why use kill -9?
+- When a process is hung/frozen and doesn’t respond to kill PID (SIGTERM).
+- When a process ignores other signals.
+- When you need to force-stop quickly (like zombie processes, stuck apps).
+
+### 🔹 Problems with kill -9
+- Process does not clean up (temporary files, open sockets, locks remain).
+- If it’s writing to a database/file → may cause corruption.
+- Should be last resort.
+
+### 🔹 Step-by-Step Examples
     1. Find PID of a process
+```
 ps aux | grep nginx
+```
 (or)
+```
 pidof nginx
+```
     1. Try graceful kill first
+```
 kill PID   # Sends SIGTERM (15)
+```
     1. If it doesn’t stop, force kill
+```
 kill -9 PID
+```
     1. Check if process is gone
+```
 ps -p PID
+```
+
+
 🔹 Alternative to kill -9
 Instead of kill -9, try:
     • Graceful stop with SIGTERM
