@@ -223,6 +223,7 @@ kill -USR1 1234
 
 (used by apps like nginx to reopen logs)
 
+
 ✅ So:
     • kill -l shows all available signals.
     • The most used in daily DevOps work: SIGHUP (1), SIGINT (2), SIGTERM (15), SIGKILL (9), SIGSTOP (19), SIGCONT (18).
