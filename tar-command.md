@@ -1,4 +1,4 @@
-## 1. **What is `tar`?**
+## 1. What is `tar`?
 
 * `tar` stands for **tape archive**.
 * It was originally designed for writing data to sequential storage devices like tapes.
