@@ -54,10 +54,10 @@ sudo tcpdump -w capture.pcap
 #If you want to capture only port 80 traffic (HTTP), use:
 sudo tcpdump -i any port 80 -w capture.pcap
 ```
-`-i any` → Capture on all interfaces (you can also specify one, like -i eth0).
-`port 80` → Only traffic to/from TCP/UDP port 80.
-`-w capture.pcap` → Write to file instead of printing on screen.
-`-w` = write to file.
+`-i any` → Capture on all interfaces (you can also specify one, like -i eth0).  
+`port 80` → Only traffic to/from TCP/UDP port 80.  
+`-w capture.pcap` → Write to file instead of printing on screen.  
+`-w` = write to file.  
 Later analyze with Wireshark.
 #### Read from a saved file
 ```
@@ -111,3 +111,22 @@ This is the 3-way handshake:
 - SYN
 - SYN+ACK
 - ACK
+
+---
+Bonus filters:
+
+* Only incoming HTTP:
+
+  ```bash
+  sudo tcpdump -i any dst port 80 -w capture.pcap
+  ```
+* Only outgoing HTTP:
+
+  ```bash
+  sudo tcpdump -i any src port 80 -w capture.pcap
+  ```
+* HTTP + HTTPS (ports 80 & 443):
+
+  ```bash
+  sudo tcpdump -i any port 80 or port 443 -w capture.pcap
+  ```
