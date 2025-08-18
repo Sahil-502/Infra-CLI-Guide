@@ -57,8 +57,6 @@ Other compressions:
 * `tar -cjvf archive.tar.bz2 file1 file2` → bzip2
 * `tar -cJvf archive.tar.xz file1 file2` → xz
 
----
-
 ### 3.3 Extracting Archives
 
 ```bash
