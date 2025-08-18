@@ -1,10 +1,5 @@
-**######################################################################################################################**
-
-**1.Core Foundations:-**
-
-**######################################################################################################################**	
-
-**Linux**
+# **1.Core Foundations:-**
+## **Linux**
 
 •	Linux FS, perms, processes: ls, cd, cat, ps, top, kill, chmod, chown.
 
@@ -20,13 +15,13 @@
 
 •	Networking: HTTP, DNS, TCP/UDP, firewalls, routing tables.
 
-**Git**
+## **Git**
 
 •	Understand Git deeply (branching, merging, rebasing, tagging).
 
 •	Git: init/clone/branch/merge/rebase; clean commit messages; PR workflow, Git hooks.
 
-**Etc**
+## **Etc**
 
 •	Python essentials for automation (venv, argparse, requests, json, logging).
 
@@ -34,7 +29,7 @@
 
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-**Projects**
+### **Projects**
 
 	Automation Scripts: Bash/Python to automate GCP tasks
 
@@ -42,11 +37,11 @@
 
 **######################################################################################################################**
 
-**2.Containers:-** 
+# **2.Containers:-** 
 
 **######################################################################################################################**
 
-**Docker**
+## **Docker**
 
 •	Docker: images, volumes, networking, multi-stage builds.
 
@@ -56,7 +51,7 @@
 
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-Docker Projects:-
+### Docker Projects:-
 
 •	Containerize a simple web app (Node.js or Nginx static). Push to Artifact Registry.
 
@@ -66,7 +61,7 @@ Docker Projects:-
 
 **######################################################################################################################**
 
-**3.CI/CD:-**
+## **3.CI/CD:-**
 
 **######################################################################################################################**
 
@@ -357,6 +352,7 @@ Rightsizing
 Budget alerts
 
 Postmortems.
+
 
 
 
