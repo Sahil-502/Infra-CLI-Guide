@@ -151,3 +151,54 @@ In simple words:
 
 
 ### Multiline strings:
+```yaml
+description: |
+  This is a long text
+  that spans multiple lines.
+```
+### Comparison: YAML vs JSON
+JSON:
+```json
+{
+  "name": "Sahil",
+  "skills": ["GCP", "Kubernetes"]
+}
+```
+YAML: 
+```yaml
+name: Sahil
+skills:
+  - GCP
+  - Kubernetes
+```
+YAML is shorter and more readable.
+### YAML in Real Tools
+Docker Compose:
+```yaml
+version: "3"
+services:
+  web:
+    image: nginx
+    ports:
+      - "80:80"
+```
+Kubernetes Pod:
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+      ports:
+        - containerPort: 80
+```
+### Practice Plan
+
+🔹 Step 1: Write simple key-value YAML
+🔹 Step 2: Create lists and dictionaries
+🔹 Step 3: Mix lists + dictionaries (nested)
+🔹 Step 4: Try Docker Compose & Kubernetes YAML
+🔹 Step 5: Validate YAML using an online linter (like yamllint.com)
