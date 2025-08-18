@@ -130,3 +130,121 @@ Bonus filters:
   ```bash
   sudo tcpdump -i any port 80 or port 443 -w capture.pcap
   ```
+---
+
+### 1. Reading a `.pcap` file
+
+If you already have `capture.pcap`, you can read it like this:
+
+```bash
+sudo tcpdump -r capture.pcap
+```
+
+* `-r` → read packets from a saved file instead of live traffic.
+* By default, it prints a **summary** of each packet (protocol, IPs, ports, flags, etc.).
+
+---
+
+### 2. Filtering while reading
+
+You can apply filters to the `.pcap` just like live capture:
+
+🔹 Show only HTTP (port 80) traffic:
+
+```bash
+sudo tcpdump -r capture.pcap port 80
+```
+
+🔹 Show only traffic between two hosts:
+
+```bash
+sudo tcpdump -r capture.pcap host 192.168.1.10
+```
+
+🔹 Show only TCP SYN packets (new connections):
+
+```bash
+sudo tcpdump -r capture.pcap 'tcp[tcpflags] & tcp-syn != 0'
+```
+
+---
+
+### 3. Show packet contents
+
+By default, `tcpdump` only shows headers. You can add:
+
+* `-X` → Print **hex + ASCII dump** of the packet.
+* `-A` → Print packet contents in **ASCII** (useful for HTTP payloads).
+
+Example:
+
+```bash
+sudo tcpdump -r capture.pcap -A port 80
+```
+
+---
+
+### 4. Count packets
+
+Just want statistics?
+
+```bash
+sudo tcpdump -r capture.pcap -q | wc -l
+```
+
+(or use `-q` for less verbose output).
+
+---
+
+### 5. Verbose details
+
+* `-v`, `-vv`, `-vvv` → More details about TTL, window size, options, etc.
+* Example:
+
+```bash
+sudo tcpdump -r capture.pcap -vvv port 80
+```
+
+---
+
+### 6. Example Analysis Workflow
+
+Let’s say you captured port 80 traffic:
+
+1. **View summary of packets**
+
+   ```bash
+   tcpdump -r capture.pcap -n port 80
+   ```
+
+   (shows source/destination IPs, TCP flags, etc.)
+
+2. **Check only SYN packets** (to see connections being initiated):
+
+   ```bash
+   tcpdump -r capture.pcap 'tcp[tcpflags] & tcp-syn != 0'
+   ```
+
+3. **Look for HTTP payloads**:
+
+   ```bash
+   tcpdump -r capture.pcap -A port 80
+   ```
+
+4. **Check packet size distribution**:
+
+   ```bash
+   tcpdump -r capture.pcap -n -tttt
+   ```
+
+   (with timestamps)
+
+---
+
+In short:
+
+* Use `-r` to **read** the capture.
+* Combine with **filters** (`port`, `host`, `tcp flags`).
+* Use `-A` or `-X` to **see data payloads**.
+* Use `-v/-vvv` to get **deep protocol details**.
+
