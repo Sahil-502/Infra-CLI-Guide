@@ -176,29 +176,29 @@ killall -9 nginx
 ### 🔹 Grouping Signals
 👉 By Category
 1. Process Control
-        ○ SIGTERM (15) – polite stop
-        ○ SIGKILL (9) – force stop
-        ○ SIGSTOP (19) – pause
-        ○ SIGCONT (18) – resume
+- `SIGTERM (15)` – polite stop
+- `SIGKILL (9)` – force stop
+- `SIGSTOP (19)` – pause
+- `SIGCONT (18)` – resume
 2. User Interaction
-        ○ SIGINT (2) – Ctrl+C
-        ○ SIGTSTP (20) – Ctrl+Z
-        ○ SIGHUP (1) – terminal hangup
+- `SIGINT (2)` – Ctrl+C
+- `SIGTSTP (20)` – Ctrl+Z
+- `SIGHUP (1)` – terminal hangup
 3. Errors / Faults
-        ○ SIGSEGV (11) – segfault
-        ○ SIGFPE (8) – math error
-        ○ SIGILL (4) – illegal instruction
-        ○ SIGBUS (7) – memory error
+- `SIGSEGV (11)` – segfault
+- `SIGFPE (8)` – math error
+- `SIGILL (4)` – illegal instruction
+- `SIGBUS (7)` – memory error
 4. Resource Limits
-        ○ SIGXCPU (24) – too much CPU
-        ○ SIGXFSZ (25) – file too big
+- `SIGXCPU (24)` – too much CPU
+- `SIGXFSZ (25)` – file too big
 5. Timers
-        ○ SIGALRM (14) – alarm
-        ○ SIGVTALRM (26) – virtual timer
-        ○ SIGPROF (27) – profiling timer
+- `SIGALRM (14)` – alarm
+- `SIGVTALRM (26)` – virtual timer
+- `SIGPROF (27)` – profiling timer
 6. Custom
-        ○ SIGUSR1 (10)
-        ○ SIGUSR2 (12)
+- `SIGUSR1 (10)`
+- `SIGUSR2 (12)`
 
 ### 🔹 Real Examples
 1. Gracefully stop Nginx
