@@ -144,9 +144,9 @@ Both `pod1` and `pod2` reuse the same container config, only the `name` changes.
 - Makes YAML cleaner, shorter, and easy to update.
   - Change one place → it reflects everywhere.
 
-In simple words:
+In simple words:<br>
+`&` = save something  
 
-`&` = save something \n
 `*` = use it again anywhere
 
 
