@@ -51,10 +51,11 @@ This sends `SIGTERM` to process with PID `1234`.
 
 
 
-## 🔹 Use of `kill -9 PID`?
+### 🔹 Use of `kill -9 PID`?
 - kill is a Linux command used to send signals to processes.
 - 9 means you’re sending the SIGKILL signal.
 - PID is the Process ID of the program you want to kill.
+
 So, kill -9 PID = “Forcefully terminate the process with this PID immediately, no cleanup allowed.”
 
 
