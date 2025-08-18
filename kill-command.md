@@ -175,42 +175,52 @@ killall -9 nginx
 
 ### 🔹 Grouping Signals
 👉 By Category
-    1. Process Control
+1. Process Control
         ○ SIGTERM (15) – polite stop
         ○ SIGKILL (9) – force stop
         ○ SIGSTOP (19) – pause
         ○ SIGCONT (18) – resume
-    2. User Interaction
+2. User Interaction
         ○ SIGINT (2) – Ctrl+C
         ○ SIGTSTP (20) – Ctrl+Z
         ○ SIGHUP (1) – terminal hangup
-    3. Errors / Faults
+3. Errors / Faults
         ○ SIGSEGV (11) – segfault
         ○ SIGFPE (8) – math error
         ○ SIGILL (4) – illegal instruction
         ○ SIGBUS (7) – memory error
-    4. Resource Limits
+4. Resource Limits
         ○ SIGXCPU (24) – too much CPU
         ○ SIGXFSZ (25) – file too big
-    5. Timers
+5. Timers
         ○ SIGALRM (14) – alarm
         ○ SIGVTALRM (26) – virtual timer
         ○ SIGPROF (27) – profiling timer
-    6. Custom
+6. Custom
         ○ SIGUSR1 (10)
         ○ SIGUSR2 (12)
-🔹 Real Examples
+
+### 🔹 Real Examples
 1. Gracefully stop Nginx
+```
 kill -15 $(pidof nginx)
+```
 2. Force kill a hung process
+```
 kill -9 1234
+```
 3. Reload app config (SIGHUP)
+```
 kill -1 $(pidof sshd)
+```
 4. Pause and resume a process
+```
 kill -STOP 1234
 kill -CONT 1234
+```
 5. Send custom signal to app
 kill -USR1 1234
+
 (used by apps like nginx to reopen logs)
 
 ✅ So:
