@@ -81,7 +81,7 @@ kill -l
 - Should be last resort.
 
 ### 🔹 Step-by-Step Examples
-    1. Find PID of a process
+Find PID of a process
 ```
 ps aux | grep nginx
 ```
@@ -89,15 +89,15 @@ ps aux | grep nginx
 ```
 pidof nginx
 ```
-    1. Try graceful kill first
+Try graceful kill first
 ```
 kill PID   # Sends SIGTERM (15)
 ```
-    1. If it doesn’t stop, force kill
+If it doesn’t stop, force kill
 ```
 kill -9 PID
 ```
-    1. Check if process is gone
+Check if process is gone
 ```
 ps -p PID
 ```
