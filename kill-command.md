@@ -131,8 +131,7 @@ killall -9 nginx
 
 ✅ Golden Rule: Always try kill PID (SIGTERM) first, use kill -9 PID only when absolutely necessary.
 
-################################################################################################
-🔹 Most Common Signals Explained
+## 🔹 Most Common Signals Explained
 
 | Signal        | Number | Meaning                                                | Usage Example                                         |
 | ------------- | ------ | ------------------------------------------------------ | ----------------------------------------------------- |
@@ -169,11 +168,12 @@ killall -9 nginx
 | **SIGSYS**    | 31     | Bad system call                                        | Invalid syscall attempted                             |
 
 
-🔹 Realtime Signals (34–64)
-    • SIGRTMIN → SIGRTMAX are Realtime signals.
-    • They’re not fixed in meaning – used by apps and systemd.
-    • Example: systemd services use them for notifications.
-🔹 Grouping Signals
+### 🔹 Realtime Signals (34–64)
+- SIGRTMIN → SIGRTMAX are Realtime signals.
+- They’re not fixed in meaning – used by apps and systemd.
+- Example: `systemd` services use them for notifications.
+
+### 🔹 Grouping Signals
 👉 By Category
     1. Process Control
         ○ SIGTERM (15) – polite stop
