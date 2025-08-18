@@ -33,10 +33,10 @@ This sends `SIGTERM` to process with PID `1234`.
 
 ### 🎯 Why Use kill?
 
-    Stop a program that’s misbehaving.
-    Restart daemons by sending SIGHUP.
-    Pause/resume long-running tasks.  
-    Clean up stuck processes.
+- Stop a program that’s misbehaving.
+- Restart daemons by sending SIGHUP.
+- Pause/resume long-running tasks.  
+- Clean up stuck processes.
 
 
 
