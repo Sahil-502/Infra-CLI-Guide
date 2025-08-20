@@ -1,7 +1,7 @@
 ## Steps to Create a SSL Certificate
 #### Generate a CSR (Certificate Signing Request)
 - open mmc in in windows and create a custom request:-  
-![Alt text](SSL-Certificate/ssl-pic/1-mmc.png)
+![Alt text](ssl-pic/1-mmc.png)
 
 
 ### •	Create a public SSL on Zero SSL and paste it:
