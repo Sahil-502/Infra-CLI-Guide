@@ -1,8 +1,7 @@
-### •	Create Private SSL Key.
-
-pic
-
-![Alt text](D:\"1. GIT"\Infra-CLI-Guide\SSL\PIC\ssl5-cmd-1)
+## Steps to Create a SSL Certificate
+#### Generate a CSR (Certificate Signing Request)
+- open mmc in in windows and create a custom request:- 
+![Alt text](SSL-Certificate/ssl-pic/1-mmc.png)
 
 
 ### •	Create a public SSL on Zero SSL and paste it:
