@@ -4,7 +4,7 @@
 ![Alt text](ssl-pic/1-mmc.png)  
 
 
-<img src="ssl-pic/1-mmc.png" alt="Alt text" width="300"/>
+<img src="ssl-pic/1-mmc.png" alt="Alt text" width="900"/>
 
 
 
