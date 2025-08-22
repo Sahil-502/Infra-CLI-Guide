@@ -18,7 +18,7 @@ File > Add or Remove Snap-ins > Certificates > add > ok > Certificates-Current U
 
 ##### Now Save your CSR
 ![Alt text](ssl-pic/6-mmc.png)  
-- Keep the private key (.key) safe — you’ll need it for installation.
+- Keep the CSR file safe — you’ll need it for installation.
 
 ##### Open CSR file in text editor and copy  
 ![Alt text](ssl-pic/6-pvt-cert.png)  
@@ -38,7 +38,7 @@ File > Add or Remove Snap-ins > Certificates > add > ok > Certificates-Current U
 - You’ll get a .crt file (certificate) + CA bundle (intermediate certs).  
 ![Alt text](ssl-pic/9-file.png)  
 ![Alt text](ssl-pic/10-file.png) 
-Open the folder and install certificate.crt file.  
+- Open the folder and install certificate.crt file.  
 
 ##### Go to MMC and check the certificate install or not, if certificate installed then export the pfx file.
 ![Alt text](ssl-pic/11-mmc.png) 
