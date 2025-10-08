@@ -1,4 +1,3 @@
-<<<<<<< HEAD
  Volume in drive D is Data-Drive
  Volume Serial Number is AE50-80E0
 
@@ -20,22 +19,4 @@
 05-10-2025  11:29 PM    <DIR>          pvt-repo
 05-10-2025  11:28 PM               368 pvt-repo.bat
                6 File(s)          2,328 bytes
-               9 Dir(s)  118,974,812,160 bytes free
-=======
-GCP-Plan01.md
-Linux Process Monitoring Tools.md
-Q&A.md
-SSL-Certificate
-The base64 Command in Linux.md
-Wireshark.md
-YAML.md
-crictl-command.md
-demo
-demo.sh
-journalctl-command.md
-kill-command.md
-psaux-command.md
-pstree-command.md
-tar-command.md
-tcpdump-command.md
->>>>>>> a4e92716c5235147582c38e73de7ee78b27931f1
+               9 Dir(s)  118,974,808,064 bytes free
